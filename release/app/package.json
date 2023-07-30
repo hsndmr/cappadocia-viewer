@@ -1,0 +1,17 @@
+{
+  "name": "cappadocia-viewer",
+  "version": "4.6.0",
+  "description": "Cappadocia Viewer",
+  "license": "MIT",
+  "author": {
+    "name": "Hasan Demir",
+    "url": "https://github.com/hsndmr"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "postinstall": "npm run rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
+  },
+  "dependencies": {}
+}
