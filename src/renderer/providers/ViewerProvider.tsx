@@ -18,7 +18,7 @@ const createDb = () => {
       type: 'string',
       message: 'string',
       timestamp: 'number',
-      badgeText: 'string',
+      badge: 'string',
       badgeType: 'string',
       context: 'string',
     },
