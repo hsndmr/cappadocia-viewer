@@ -4,7 +4,6 @@ import { Chip, Stack } from '@mui/material';
 import Box from '@mui/material/Box';
 import dayjs from 'dayjs';
 import { motion } from 'framer-motion';
-import { JSONTree } from 'react-json-tree';
 import { Viewer } from '../../store/Viewer';
 import JsonView from '../JsonView';
 
