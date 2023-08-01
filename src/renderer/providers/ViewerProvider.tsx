@@ -61,6 +61,10 @@ export default function ViewerProvider({ children }: PropsWithChildren) {
       // eslint-disable-next-line promise/catch-or-return
       await insert(db, data);
 
+      if (store.viewerStore.searchText !== '') {
+        return;
+      }
+
       store.viewerStore.addViewer(ViewerModel.create(data));
     };
 
