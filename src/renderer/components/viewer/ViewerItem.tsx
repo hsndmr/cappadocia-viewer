@@ -50,12 +50,14 @@ export default function ViewerItem({
         </Box>
         <Stack>
           {viewer.hasBadge && (
-            <Chip
-              size="small"
-              label={viewer.badge}
-              color={viewer.badgeColor}
-              variant="outlined"
-            />
+            <Box>
+              <Chip
+                size="small"
+                label={viewer.badge}
+                color={viewer.badgeColor}
+                variant="outlined"
+              />
+            </Box>
           )}
           <Component viewer={viewer} />
           {viewer.hasContext && <JSONTree data={viewer.contextJson} />}
