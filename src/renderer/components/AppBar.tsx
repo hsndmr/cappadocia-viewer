@@ -28,6 +28,17 @@ export const Search = observer(() => {
       return;
     }
 
+    if (deferredValue === '') {
+      const viewers = Object.values((viewerDb.data.docs as any).docs)
+        .reverse()
+        .map((doc) => {
+          return ViewerModel.create(doc as any);
+        });
+
+      viewerStore.setFilteredViewers(viewers, deferredValue);
+      return;
+    }
+
     // eslint-disable-next-line promise/catch-or-return
     search(viewerDb, {
       term: deferredValue,
