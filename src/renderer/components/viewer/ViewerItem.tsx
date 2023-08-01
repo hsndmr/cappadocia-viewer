@@ -45,7 +45,7 @@ export default function ViewerItem({
           }}
         >
           <Typography>
-            {dayjs(viewer.timestamp).format('DD.MM.YYYY h:mm')}
+            {dayjs(viewer.timestamp).format('DD.MM.YYYY h:mm:ss')}
           </Typography>
         </Box>
         <Stack>
