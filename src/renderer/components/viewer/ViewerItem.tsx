@@ -6,6 +6,7 @@ import dayjs from 'dayjs';
 import { motion } from 'framer-motion';
 import { JSONTree } from 'react-json-tree';
 import { Viewer } from '../../store/Viewer';
+import JsonView from '../JsonView';
 
 export interface BaseViewerItemProps {
   viewer: Viewer;
@@ -60,7 +61,7 @@ export default function ViewerItem({
             </Box>
           )}
           <Component viewer={viewer} />
-          {viewer.hasContext && <JSONTree data={viewer.contextJson} />}
+          {viewer.hasContext && <JsonView data={viewer.context} />}
         </Stack>
       </Stack>
     </motion.div>
