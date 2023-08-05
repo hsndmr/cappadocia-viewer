@@ -31,7 +31,6 @@ export default function ViewerItem({
       <Stack
         direction="row"
         spacing={3}
-        alignItems="center"
         sx={{
           minHeight: 100,
           p: 2,
@@ -44,11 +43,16 @@ export default function ViewerItem({
             flexShrink: 0,
           }}
         >
-          <Typography>
+          <Typography fontSize={15}>
             {dayjs(viewer.timestamp).format('DD.MM.YYYY h:mm:ss')}
           </Typography>
         </Box>
-        <Stack spacing={1}>
+        <Stack
+          sx={{
+            maxWidth: '800px',
+          }}
+          spacing={1}
+        >
           {viewer.hasBadge && (
             <Box>
               <Chip
@@ -59,7 +63,13 @@ export default function ViewerItem({
               />
             </Box>
           )}
-          <Box>
+          <Box
+            sx={{
+              display: 'flex',
+              overflow: 'auto',
+              fontSize: 16,
+            }}
+          >
             <Component viewer={viewer} />
           </Box>
           {viewer.context && <ContextView context={viewer.context} />}
