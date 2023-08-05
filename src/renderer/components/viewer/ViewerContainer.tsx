@@ -6,6 +6,7 @@ import ViewerItem from './ViewerItem';
 import { ViewerType } from '../../enums/ViewerType';
 import QueryViewerItem from './QueryViewerItem';
 import JobViewerItem from './JobViewerItem';
+import RequestViewerItem from './RequestViewerItem';
 
 export const renderByType = (type: ViewerType) => {
   switch (type) {
@@ -13,6 +14,8 @@ export const renderByType = (type: ViewerType) => {
       return QueryViewerItem;
     case ViewerType.JOB:
       return JobViewerItem;
+    case ViewerType.REQUEST:
+      return RequestViewerItem;
     default:
       return LogViewerItem;
   }
