@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import dayjs from 'dayjs';
 import { motion } from 'framer-motion';
 import { Viewer } from '../../store/Viewer';
-import JsonView from '../JsonView';
+import ContextView from '../ContextView';
 
 export interface BaseViewerItemProps {
   viewer: Viewer;
@@ -48,7 +48,7 @@ export default function ViewerItem({
             {dayjs(viewer.timestamp).format('DD.MM.YYYY h:mm:ss')}
           </Typography>
         </Box>
-        <Stack>
+        <Stack spacing={1}>
           {viewer.hasBadge && (
             <Box>
               <Chip
@@ -59,8 +59,10 @@ export default function ViewerItem({
               />
             </Box>
           )}
-          <Component viewer={viewer} />
-          {viewer.hasContext && <JsonView data={viewer.context} />}
+          <Box>
+            <Component viewer={viewer} />
+          </Box>
+          {viewer.context && <ContextView context={viewer.context} />}
         </Stack>
       </Stack>
     </motion.div>
