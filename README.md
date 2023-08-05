@@ -8,6 +8,6 @@ Cappadocia Viewer, a desktop application, significantly enhances the debugging e
 
 ### Installation
 
-On the [Releases](https://github.com/hsndmr/cappadocia-viewer/releases/tag/0.0.2) page, you can find the latest version of:
+On the [Releases](https://github.com/hsndmr/cappadocia-viewer/releases/tag/0.1.0) page, you can find the latest version of:
 
 - macOS
