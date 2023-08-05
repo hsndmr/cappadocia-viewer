@@ -2,6 +2,27 @@
 
 All notable changes to `cappadocia-viewer` will be documented in this file.
 
+## 0.1.0 - 2023-08-05
+
+- [chore: move types react-syntax-highlighter dev dependencies](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add RequestViewerItem to view request type](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add REQUEST type to ViewerType](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add font size](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add font size](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: improve layout and font size](https://github.com/hsndmr/cappadocia-viewer)
+- [refactor: remove unused element](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: update ViewerContainer to render items based on ViewerType enum](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add new JobViewerItem component for job-related messages](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add new QueryViewerItem component with SQL syntax highlighting](https://github.com/hsndmr/cappadocia-viewer)
+- [refactor: replace JsonView with ContextView and improve layout](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add new ContextView component with attribute rendering support](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: update ViewerModel, replace type with enum from ViewerType enum](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add new enum ViewerType with LOG, QUERY, and JOB values](https://github.com/hsndmr/cappadocia-viewer)
+- [chore: update JsonView data prop type and remove JSON.parse call](https://github.com/hsndmr/cappadocia-viewer)
+- [refactor: rename endpoint /viewer to /viewers and update handler](https://github.com/hsndmr/cappadocia-viewer)
+- [feat: add lodash, react-syntax-highlighter and types](https://github.com/hsndmr/cappadocia-viewer)
+- [docs: add changelog](https://github.com/hsndmr/cappadocia-viewer)
+
 ## 0.0.1 - 2023-08-02
 
 - [chore: bump version to 0.0.2](https://github.com/hsndmr/cappadocia-viewer/commit/770fa7418cf2b6ba4b36fd32c79fec8dc72aaffa)
