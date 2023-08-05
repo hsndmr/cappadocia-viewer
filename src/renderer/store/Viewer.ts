@@ -1,10 +1,11 @@
 import { Instance, types } from 'mobx-state-tree';
+import { ViewerType } from '../enums/ViewerType';
 
 export const ViewerModel = types
   .model('Viewer')
   .props({
     uuid: types.identifier,
-    type: '',
+    type: types.enumeration(Object.values(ViewerType)),
     message: '',
     badge: '',
     badgeType: '',
