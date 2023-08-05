@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import bodyParser from 'body-parser';
 import { Request } from './Server.interface';
 
-export function viewerPostHandler(req: Request, res: Response) {
+export function viewersPostHandler(req: Request, res: Response) {
   const { context, ...rest } = req.body;
   req.eventEmitter?.emit('event', {
     ...rest,
@@ -28,7 +28,7 @@ export default function createExpressApp(eventEmitter: EventEmitter) {
   app.use(bodyParser.json());
   app.use(createEventEmitterMiddleware(eventEmitter));
 
-  app.post('/viewer', viewerPostHandler);
+  app.post('/viewers', viewersPostHandler);
 
   return app;
 }
