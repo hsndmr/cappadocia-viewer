@@ -1,7 +1,7 @@
 import { JSONTree } from 'react-json-tree';
 
 interface JsonViewProps {
-  data: string;
+  data: unknown;
 }
 
 export default function JsonView({ data }: JsonViewProps) {
@@ -28,9 +28,7 @@ export default function JsonView({ data }: JsonViewProps) {
         base0F: '#cc6633',
       }}
       hideRoot
-      data={{
-        context: JSON.parse(data),
-      }}
+      data={data}
     />
   );
 }
