@@ -21,9 +21,12 @@ export function renderAttribute(value: unknown) {
   if (isNonEmptyArray && _.size(value) === 1 && _.isString(value[0])) {
     return (
       <Typography
+        sx={{
+          display: 'inline-flex',
+        }}
         paddingY={0.2}
         paddingX={0.8}
-        fontSize={14}
+        fontSize={16}
         borderRadius={1}
         bgcolor="gray"
       >
@@ -37,7 +40,7 @@ export function renderAttribute(value: unknown) {
   }
 
   if (isStringOrNumber) {
-    return value;
+    return <Typography fontSize={16}>{value}</Typography>;
   }
 
   return '-';
@@ -71,7 +74,9 @@ export default function ContextView({ context }: ContextViewProps) {
                   key={key}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell>{key}</TableCell>
+                  <TableCell>
+                    <Typography fontSize={16}>{key}</Typography>
+                  </TableCell>
                   <TableCell>{renderAttribute(attributes[key])}</TableCell>
                 </TableRow>
               );
